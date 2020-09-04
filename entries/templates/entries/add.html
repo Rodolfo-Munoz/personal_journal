@@ -1,0 +1,18 @@
+{% extends 'entries/base.html' %}
+
+{% block content %}
+
+     <form method="POST">
+        {% csrf_token %}
+         <div class="form-group">
+             <input type="text" class="form-control" name="title" id="title" placeholder="Title" required maxlength="50"><br>
+             <textarea class="form-control" name="text" rows="10" required placeholder="What&#x27;s on your mind?"></textarea>
+         </div>
+
+         <div style="text-align: right">
+             <button class="btn btn-primary" type="submit">Submit</button>
+         </div>
+     </form>
+    
+{% endblock content %}
+    
